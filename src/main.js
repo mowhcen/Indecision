@@ -2,10 +2,15 @@ console.log("app.js is running");
 
 // JSX - JavaScript XML
 
+var app = {
+    title: "My Indecision App",
+    subTitle: "Let`s Machine Decision for you",
+};
+
 var template = (
     <div>
-        <h1>Indecision App</h1>
-        <p>this is some info</p>
+        <h1>{app.title}</h1>
+        <p>{app.subTitle}</p>
         <ol>
             <li>item one</li>
             <li>item two</li>
@@ -13,11 +18,17 @@ var template = (
     </div>
 );
 
+var user = {
+    name: "Mohammad Mohsen Hosseini",
+    age: 27,
+    location: "Shiraz",
+};
+
 var templateTwo = (
     <div>
-        <h1>Mohammad Mohsen Hosseini</h1>
-        <p>Age: 20</p>
-        <p>Location: Shiraz</p>
+        <h1>{user.name}</h1>
+        <p>Age: {user.age}</p>
+        <p>Location: {user.location}</p>
     </div>
 );
 
