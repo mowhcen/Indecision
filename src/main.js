@@ -26,6 +26,29 @@ const template = (
     </div>
 );
 
+let count = 0;
+
+const reset = () => {
+    console.log("reset");
+};
+
+const addOne = () => {
+    console.log("addOne");
+};
+
+const minusOne = () => {
+    console.log("minusOne");
+};
+
+const templateTwo = (
+    <div>
+        <button onClick={reset}>Reset</button>
+        <h1>Count: {count}</h1>
+        <button onClick={minusOne}>-1</button>
+        <button onClick={addOne}>+1</button>
+    </div>
+);
+
 const appRoot = document.getElementById("app");
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
