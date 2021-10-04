@@ -1,27 +1,26 @@
 const appRoot = document.getElementById("app");
 
-let state = "Show";
-
-const setStatus = (change) => {
-    state = change;
-};
-
-const showStatus = () => state;
+let state = false;
 
 const changeDetails = () => {
-    showStatus() === "Show" ? setStatus("Hide") : setStatus("Show");
+    state = !state;
     rendering();
 };
 
-const message = () =>
-    showStatus() === "Show" ? undefined : <p>message show on screen</p>;
+const message = () => (!state ? undefined : <p>message show on screen</p>);
 
 const rendering = () => {
     const template = (
         <div>
             <h1>Visibility Toggle</h1>
-            <button onClick={changeDetails}>{showStatus()} details</button>
-            {message()}
+            <button onClick={changeDetails}>
+                {state ? "Hide details" : "Show details"}
+            </button>
+            {state && (
+                <div>
+                    <p>Hey. These are some details you can now see</p>
+                </div>
+            )}
         </div>
     );
 
