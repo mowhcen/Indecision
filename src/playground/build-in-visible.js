@@ -1,30 +1,65 @@
-const appRoot = document.getElementById("app");
+class VisibilityToggle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleVisibilityToggle = this.handleVisibilityToggle.bind(this);
+        this.state = {
+            visibility: false,
+        };
+    }
 
-let state = false;
+    handleVisibilityToggle() {
+        this.setState((prevState) => {
+            return {
+                visibility: !prevState.visibility,
+            };
+        });
+    }
 
-const changeDetails = () => {
-    state = !state;
-    rendering();
-};
+    render() {
+        return (
+            <div>
+                <h1>Visibility Toggle</h1>
+                <button onClick={this.handleVisibilityToggle}>
+                    {this.state.visibility ? "Hide details" : "Show details"}
+                </button>
+                {this.state.visibility && (
+                    <div>
+                        <p>Hey. These are some details you can now see</p>
+                    </div>
+                )}
+            </div>
+        );
+    }
+}
 
-const message = () => (!state ? undefined : <p>message show on screen</p>);
+ReactDOM.render(<VisibilityToggle />, document.getElementById("app"));
+// const appRoot = document.getElementById("app");
 
-const rendering = () => {
-    const template = (
-        <div>
-            <h1>Visibility Toggle</h1>
-            <button onClick={changeDetails}>
-                {state ? "Hide details" : "Show details"}
-            </button>
-            {state && (
-                <div>
-                    <p>Hey. These are some details you can now see</p>
-                </div>
-            )}
-        </div>
-    );
+// let state = false;
 
-    ReactDOM.render(template, appRoot);
-};
+// const changeDetails = () => {
+//     state = !state;
+//     rendering();
+// };
 
-rendering();
+// const message = () => (!state ? undefined : <p>message show on screen</p>);
+
+// const rendering = () => {
+//     const template = (
+//         <div>
+//             <h1>Visibility Toggle</h1>
+//             <button onClick={changeDetails}>
+//                 {state ? "Hide details" : "Show details"}
+//             </button>
+//             {state && (
+//                 <div>
+//                     <p>Hey. These are some details you can now see</p>
+//                 </div>
+//             )}
+//         </div>
+//     );
+
+//     ReactDOM.render(template, appRoot);
+// };
+
+// rendering();
