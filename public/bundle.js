@@ -69,24 +69,39 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__utils_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(1);
+// // import "./utils.js";
+
 
 
 console.log("obj ect!!!");
 
-console.log(square(4));
+console.log(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* square */](4), __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* add */](100, 21), __WEBPACK_IMPORTED_MODULE_0__utils__["b" /* default */](20, 49));
+
+// import { canDrink, isAdult } from "./person";
+
+// console.log(canDrink(29), isAdult(2));
 
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return square; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return add; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return subtract; });
 console.log("utiles");
 
 const square = (x) => {
     return x * x;
 };
+
+const add = (a, b) => a + b;
+
+const subtract = (a, b) => a - b;
+
+
 
 
 /***/ })
