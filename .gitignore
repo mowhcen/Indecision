@@ -3,4 +3,4 @@
 \node_modules
 
 # ignore app.js
-\app.js
+bundle.js
