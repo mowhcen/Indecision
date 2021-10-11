@@ -1,11 +1,6 @@
-// // import "./utils.js";
+import React from "react";
+import ReactDOM from "react-dom";
 
-// import subtract, { add, square } from "./utils";
+const template = <p>testJSX</p>;
 
-// console.log("obj ect!!!");
-
-// console.log(square(4), add(100, 21), subtract(20, 49));
-
-import isSenior, { canDrink, isAdult } from "./person";
-
-console.log(canDrink(29), isAdult(2), isSenior(90));
+ReactDOM.render(template, document.getElementById("app"));
