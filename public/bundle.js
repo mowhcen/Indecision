@@ -69,18 +69,18 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person__ = __webpack_require__(1);
 // // import "./utils.js";
 
+// import subtract, { add, square } from "./utils";
+
+// console.log("obj ect!!!");
+
+// console.log(square(4), add(100, 21), subtract(20, 49));
 
 
-console.log("obj ect!!!");
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* square */](4), __WEBPACK_IMPORTED_MODULE_0__utils__["a" /* add */](100, 21), __WEBPACK_IMPORTED_MODULE_0__utils__["b" /* default */](20, 49));
-
-// import { canDrink, isAdult } from "./person";
-
-// console.log(canDrink(29), isAdult(2));
+console.log(__WEBPACK_IMPORTED_MODULE_0__person__["a" /* canDrink */](29), __WEBPACK_IMPORTED_MODULE_0__person__["c" /* isAdult */](2), __WEBPACK_IMPORTED_MODULE_0__person__["b" /* default */](90));
 
 
 /***/ }),
@@ -88,18 +88,14 @@ console.log(__WEBPACK_IMPORTED_MODULE_0__utils__["c" /* square */](4), __WEBPACK
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return square; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return add; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return subtract; });
-console.log("utiles");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return isAdult; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return canDrink; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return isSenior; });
+const isAdult = (age) => age > 18;
 
-const square = (x) => {
-    return x * x;
-};
+const canDrink = (age) => age > 35;
 
-const add = (a, b) => a + b;
-
-const subtract = (a, b) => a - b;
+const isSenior = (age) => age > 80;
 
 
 
